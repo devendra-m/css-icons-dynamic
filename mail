@@ -1,0 +1,59 @@
+<style>
+.letter {  
+	background-color: #FFF;
+	position: relative;
+	border-radius:var(--borderRadius,4px);
+	height: var(--height,40px);
+	width: var(--width,50px);
+	overflow: hidden;
+}
+.letter:before, .letter:after {
+	content: '';
+	position: absolute;
+	height: var(--pseudo-height, 50px);;
+	width: var(--pseudo-width, 50px);;
+	transform: rotate(45deg) skew(-5deg, -5deg);
+	background-color: var(--pseudo-bgcolor,#fff);
+}
+.letter:before {
+	bottom: var(--pseudo-before-bottom,-85%);
+	box-shadow: var(--pseudo-before-hoffset, -2px) var(--pseudo-before-voffset, -2px) 0 0 rgb(85 64 175);
+}
+.letter:after {
+	top: var(---pseudo-after-top,-85%);
+	box-shadow: var(--pseudo-after-hoffset, 2px) var(--pseudo-after-voffset, 2px) 0 0 rgb(85 64 175);
+}
+</style>
+<script>
+class Icon {
+  param;
+ 
+  constructor(param) {
+    this.param = param;
+  }
+
+  mail() {
+	const mail = document.querySelector(this.param.selector);
+	const radius = Math.floor(this.param.height / 10);
+	
+	mail.style.setProperty('--height',this.param.height + 'px');
+	mail.style.setProperty('--width',this.param.width + 'px');
+
+	mail.style.setProperty('--borderRadius',radius + 'px');
+	mail.style.setProperty('--pseudo-height',this.param.width + 'px');
+	mail.style.setProperty('--pseudo-width',this.param.width + 'px');
+
+  }
+}
+
+function onload(){
+  const mailIcon = new Icon({selector:".letter",height:"40",width:"50"});
+	mailIcon.mail();
+}
+
+</script>
+<body onload="onload()">
+<div class="mail">
+  <div class='letter'></div>
+</div>
+</body>
