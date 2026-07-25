@@ -47,8 +47,8 @@ class Icon {
 }
 
 function onload(){
-  const mailIcon = new Icon({selector:".letter",height:"40",width:"50"});
-	mailIcon.mail();
+  const icon = new Icon({selector:".letter",height:"40",width:"50"});
+  icon.mail();
 }
 
 </script>
