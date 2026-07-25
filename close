@@ -49,11 +49,5 @@ function onload(){
 }
 </script>
 <body onload="onload()">
-<div class="container">									
-	<div class="linkedin-icon-bg">
-		<div class="i"></div>
-		<div class="n"></div>
-	</div>
-	
-</div>
+<a href="#" class="close">
 </body>
