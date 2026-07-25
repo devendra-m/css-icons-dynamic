@@ -44,8 +44,8 @@ class Icon {
   }
 }
 function onload(){
-   const closeIcon = new Icon({selector:".close",height:"20",width:"20"});
-	 closeIcon.close();
+   const icon = new Icon({selector:".close",height:"20",width:"20"});
+   icon.close();
 }
 </script>
 <body onload="onload()">
