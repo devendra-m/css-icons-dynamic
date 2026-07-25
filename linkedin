@@ -109,8 +109,8 @@ class Icon {
   }
 }
 function onload(){
-    const linkedIcon = new Icon({selector:".container",height:"40",width:"40"});
-	linkedIcon.linked();
+    const icon = new Icon({selector:".container",height:"40",width:"40"});
+	icon.linked();
 }
 </script>
 <body onload="onload()">
